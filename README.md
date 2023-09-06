@@ -1,11 +1,11 @@
 # vault_executable
 A python script to serve secrets fetched from HashiCorp Vault  to a Datadog agent
 
-Introduction
+### Introduction
 
 Customers can fetch secrets from providers like HashiCorp Vault and serve those secrets to the Datadog agent via executable file. Customers often ask us for support with creating the executable, we do have basic examples of a python executable in our documentation but wanted to take it a step further and provide a simple but working example of a executable that fetches secrets from HashiCorp Vault and serves them to the Datadog agent.
 
-Setup
+### Setup
 
 You will need a HashiCorp Vault secret cluster is necessary to store secrets in the vault.
 
@@ -27,7 +27,7 @@ When you create a HashiCorp Vault cluster with the default settings, you should 
 ![Image 2023-09-06 at 5 10 33 PM](https://github.com/UTXOnly/vault_executable/assets/49233513/ad6f6e17-14b3-4b18-8383-2167f1827857)
 
 
-The Script
+### The Script
 ```
 #!opt/datadog-agent/embedded/bin/python3
 import json
@@ -106,7 +106,7 @@ if __name__ == "__main__" :
 
 
 
-Results Returned from Vault
+### Results Returned from Vault
 
 The results are returned in `<KEY>:<VALUE>` pairs like below. You can test massing secret keys as defined in your agent configuration to see what your executable returns (as the agent sees it).
 ```
